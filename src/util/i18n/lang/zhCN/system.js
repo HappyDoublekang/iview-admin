@@ -1,0 +1,417 @@
+export default {
+  systemLeftTab: {
+    hospital: '医院管理',
+    user: '用户管理',
+    role: '角色管理',
+    department: '科室管理',
+    grid: '监控管理'
+  },
+  userLabel: {
+    name: '姓名',
+    email: '邮箱',
+    id: '工号',
+    username: '用户名',
+    role: '角色',
+    privileges: '科室权限',
+    expiry: '有效期',
+    active: '是否激活'
+  },
+  tableBtn: {
+    add: '添加用户',
+    del: '删除用户',
+    edit: '编辑'
+  },
+  tableHead: {
+    Name: '姓名',
+    ID: '工号',
+    Username: '用户名',
+    Privileges: '科室列表',
+    Expiration: '角色列表',
+    ActivitedUser: '激活用户'
+  },
+  columns: [
+    {
+      title: '工号',
+      dataIndex: 'workNumber',
+      width: '10%'
+    },
+    {
+      title: '用户名',
+      dataIndex: 'account',
+      width: '10%'
+    },
+    {
+      title: '姓名',
+      dataIndex: 'nickname',
+      width: '10%'
+    },
+    {
+      title: '邮箱',
+      dataIndex: 'email',
+      width: '10%'
+    },
+
+    {
+      title: '角色列表',
+      dataIndex: 'roleEntityList',
+      scopedSlots: { customRender: 'role' },
+      width: '13%'
+    },
+    {
+      title: '科室列表',
+      dataIndex: 'departmentEntityList',
+      scopedSlots: { customRender: 'depart' },
+      width: '15%'
+    },
+    {
+      title: '有效期',
+      dataIndex: 'validDate',
+      width: '10%'
+    },
+    {
+      title: '激活状态',
+      dataIndex: 'isActive',
+      scopedSlots: { customRender: 'status' },
+      width: '12%'
+    },
+    {
+      title: '操作',
+      dataIndex: 'Action',
+      scopedSlots: { customRender: 'action' },
+      width: '15%'
+    }
+  ],
+  checkModal: '查看用户',
+  checkList: {
+    name: '姓名',
+    username: '用户名',
+    email: '邮箱',
+    password: '密码',
+    ID: '工号',
+    Roles: '权限列表',
+    date: '有效期',
+    dept: '科室列表',
+    homepage: '登录首页',
+    logout: '登出时间',
+    active: '是否激活'
+  },
+  checkUser: {
+    edit: '编辑',
+    cancel: '取消',
+    save: '保存'
+  },
+  reset: '重置',
+  roleManage: {
+    viewRole: '查看角色',
+    editRole: '编辑角色',
+    priv: '权限',
+    tableBtn: {
+      add: '添加角色',
+      del: '删除角色'
+    },
+    columns: [
+      {
+        title: '角色名',
+        dataIndex: 'roleName',
+        width: '15%',
+        scopedSlots: { customRender: 'roleName' }
+      },
+      { title: '用户总量', dataIndex: 'userCount', width: '15%' },
+      {
+        title: '权限',
+        dataIndex: 'permissionList',
+        scopedSlots: { customRender: 'permissionList' },
+        width: '30%'
+      },
+      {
+        title: '描述',
+        dataIndex: 'description',
+        width: '20%',
+        scopedSlots: { customRender: 'description' }
+      },
+      {
+        title: '操作',
+        dataIndex: 'action',
+        width: '15%',
+        scopedSlots: { customRender: 'action' }
+      }
+    ],
+    addRoleBtn: {
+      reset: '重置'
+    },
+    addRoles: '添加角色',
+    description: '描述',
+    addRoleCheckBoxText: '是否允许该角色的用户配置登录注销时间',
+    rolename: '角色名',
+    allocation: '权限分配',
+    addRoleTable: {
+      module: '模块',
+      sub: '子模块',
+      device: '设备管理',
+      software: '软件升级',
+      drugLib: '药物库管理',
+      database: '数据库管理',
+      treatment: '历史治疗信息',
+      patients: '历史病人信息',
+      alarms: '历史报警信息',
+      devices: '历史设备信息',
+      systemLogs: '系统日志',
+      architect: '实景绘制',
+      network: '网络设置',
+      download: '软件下载设置',
+      router: '路由器设置',
+      home: '默认登录页面',
+      basci: '基本设置'
+    }
+  },
+  hospitalManage: {
+    hospitalName: '医院名',
+    shortName: '医院简称',
+    departShort: '科室简称',
+    departManager: '科室管理员',
+    addShort: '科室管理员',
+    comfirm: '确定',
+    addDepart: '添加科室',
+    editDepart: '编辑科室',
+    delDepart: '删除科室',
+    department: '科室名',
+    checkDepart: '查看科室',
+    allBed: '总床数',
+    allPump: '总泵数',
+    deptAdmin: '科室管理员',
+    addRooms: '添加病房',
+    addRoomsBulk: '批量添加病房',
+    directlyAddBed: '快捷添加床位',
+    roomPic: '病房负责人',
+    roomNo: '房间号',
+    roomPrefix: '房号前缀',
+    numberRooms: '房间数',
+    startEnd: '房号范围',
+    roomSetting: '病房设置',
+    viewRoom: '查看房间',
+    editRoom: '编辑病房',
+    room: '房间',
+    bed: '病床',
+    bedNo: '床号',
+    addBed: '添加病床',
+    charge: '管床护士',
+    numberBed: '床位数',
+    viewBed: '查看病床',
+    editBed: '编辑病床',
+    bedSettings: '床位设置',
+    bedPrefix: '床号前缀',
+    startEndBeds: '床号范围',
+    hospitalDepartColumns: [
+      {
+        title: '科室名',
+        dataIndex: 'name',
+        width: '20%',
+        scopedSlots: { customRender: 'name' }
+      },
+      { title: '总泵数', dataIndex: 'pumpsCount', width: '10%' },
+      { title: '房间数', dataIndex: 'roomsCount', width: '15%' },
+
+      {
+        title: '科室管理员',
+        dataIndex: 'departmentManager',
+        width: '15%',
+        scopedSlots: { customRender: 'departmentManager' }
+      },
+      { title: '邮箱', dataIndex: 'email', width: '15%' },
+      {
+        title: '操作',
+        dataIndex: 'action',
+        scopedSlots: { customRender: 'action' },
+        width: '20%'
+      }
+    ],
+    // 病房表格
+    hospitalRoomColumns: [
+      { title: '病房号', dataIndex: 'name', width: '15%' },
+      { title: '病房负责人', dataIndex: 'roomManager', width: '20%' },
+      { title: '邮箱', dataIndex: 'email', width: '15%' },
+      { title: '总泵数', dataIndex: 'pumps', width: '15%' },
+      {
+        title: '操作',
+        dataIndex: 'action',
+        scopedSlots: { customRender: 'action' },
+        width: '15%'
+      }
+    ],
+    // 病床表格
+    hospitalBedColumns: [
+      { title: '床位号', dataIndex: 'name', width: '10%' },
+      { title: '管床护士', dataIndex: 'bedManager', width: '20%' },
+      { title: '床位描述', dataIndex: 'description', width: '40%' },
+      {
+        title: '操作',
+        dataIndex: 'action',
+        scopedSlots: { customRender: 'action' },
+        width: '15%'
+      }
+    ]
+  },
+  startTime: '起始时间',
+  endTime: '结束时间',
+  // 图标提示
+  view: '查看',
+  edit: '编辑',
+  // 新 快捷添加中英文
+  quicklyGenerate: '快捷生成',
+  deptName: '科室名',
+  roomEmpty: '房间数不能为空',
+  roomStartEmpty: '起始房号不能为空',
+  bedStartEmpty: '起始床号不能为空',
+  bedEmpty: '床数不能为空',
+  deptEmpty: '科室不能为空',
+  startEmpty: '起始房号不能为空',
+  plzEnterNum: '请输入数量',
+  plzEnterStartNum: '请输入起始房号',
+  plzEnterName: '请输入名称',
+  startRoom: '起始房号',
+  endRoom: '结束房号',
+  endBed: '结束床号',
+  startBed: '起始床号',
+  room50: '房间数不能大于50',
+  // 角色勾选 多语言
+  输注监护: '输注监护',
+  历史回顾: '历史回顾',
+  系统管理: '系统管理',
+  药物库: '药物库',
+  更多: '更多',
+  治疗信息: '治疗信息',
+  病人信息: '病人信息',
+  设备信息: '设备信息',
+  报警信息: '报警信息',
+  系统日志: '系统日志',
+  医院管理: '医院管理',
+  用户管理: '用户管理',
+  角色管理: '角色管理',
+  实景绘制: '实景绘制',
+  数据库管理: '数据库管理',
+  基础设置: '基础设置',
+  网络设置: '网络设置',
+  软件升级: '软件升级',
+  路由器设置: '路由器设置',
+  审核: '审核',
+  下发: '下发',
+  编辑: '编辑',
+  // 默认角色中英文
+  科室管理员: '科室管理员',
+  超级管理员: '超级管理员',
+  医护人员: '医护人员',
+  药剂师: '药剂师',
+  设备科: '设备科',
+  // 默认主页中英文
+  信息管理: '信息管理',
+  设置: '设置',
+  设备管理: '设备管理',
+  药物库管理: '药物库管理',
+  软件下载设置: '软件下载设置',
+  isDelRole: '是否确认删除角色?',
+  isDelUser: '是否确定删除此用户?',
+  OK: '确认',
+  bedFull: '病床已满',
+  accAlreadyExists: '账号已存在',
+  workNumAlreadyExists: '工号已存在',
+  inputName: '用户名不能为空',
+  departName: '科室不能为空',
+  inputUsername: '请输入用户名',
+  inputEmail: '请输入邮箱',
+  selectedRole: '请选择您的角色',
+  emailType: '请输入正确的邮箱格式',
+  accWillExpire: '账号即将在',
+  days: '天过期.',
+  plzInputName: '角色名不能为空',
+  selectBeds: '床位选择',
+  roomName: '房间名',
+  beds: '床位',
+  selectARoom: '请选择房间!',
+  resetSucc: '密码重置为初始值，点击保存按钮生效',
+  departmentTable: '科室',
+  clickToSet: '点击设置医院名称...',
+  set: '设置',
+  nameEmpty: '医院简称不能为空！',
+  shortEmpty: '医院简称不能为空！',
+  saveSucc: '保存成功！',
+  departIsEmpty: '科室名称不能为空！',
+  roomIsEmpty: '病房号不能为空！',
+  bedIsEmpty: '床位号不能为空！',
+  rightEmail: '请输入正确邮箱格式',
+  addSuccess: '添加成功',
+  editSuccess: '编辑成功',
+  delSuccess: '删除成功',
+  room: '房间',
+  bed: '床',
+  roomThan50: '超出范围限制，请重新输入',
+  bedOutoffLimit: '床位总数已超上限:50!',
+  roomOutoffLimit: '房间总数已超上限:50!',
+  departmentOutoffLimit: '科室总数已超上限:50!',
+  batchAddRoom: '房间总数已超上限！',
+  batchAddBed: '床位总数已超上限！',
+  inputText: '请输入文本',
+  inputNum: '请输入数字',
+  repeatRooms: '房间存在重复，请重新设置！',
+  repeatBed: '床位存在重复，请重新设置！',
+  roomLessThan: '房间数不能大于床位数',
+  departMore50: '',
+  roomMore50: '',
+  bedMore50: '',
+  loginName: '登录名',
+  mustBeAssigned: '病床未完成分配',
+  repeatDepartments: '科室存在重复，请重新设置！',
+  delDepart: '删除该科室会连带删除科室下的房间和床位信息，确定删除？',
+  delRoom: '删除该病房会连带删除病房下的床位信息，确定删除？',
+  delBed: '确定删除该床位？',
+  roleExist: '角色已存在',
+  roleLimit: '角色数量已经达到上限,禁止添加!',
+  scenerioArchitect: '实景绘制',
+  architect: '实景绘制',
+  gridView: '栅格视图',
+  scenerioView: '实景视图',
+  needRestart: '注意：重启后生效',
+  goToScenerio: '请前往实景绘制...',
+  goToGrid: '请在科室添加病房...',
+  noData: '无数据...',
+  goToAddRoom: '请在医院管理建立科室信息',
+  isSaveScenerioArchitect: '是否保存绘制实景图？',
+  // 实景绘制------------------
+  roooms: '病房',
+  bedsOnly: '只显示病床',
+  nurseOffice: '护士工作站',
+  displayGrid: '显示网格',
+  help: '帮助',
+  bedSize: '床大小',
+  large: '大号',
+  medium: '中号',
+  small: '小号',
+  totalRoom: '总房数',
+  totalBed: '总床数',
+  totalFun: '功能房总数',
+  isArchitected: '科室正在实景绘制中！',
+  // 科室设置中英文
+  wardView: '科室视图',
+  viewSettings: '视图设置',
+  schematic: '栅格视图',
+  architecture: '实景视图',
+  alarmConfiguration: '报警设置',
+  alarmSound: '报警音',
+  nurseCall: '护士呼叫',
+  alarmMuting: '报警静音',
+  alarmFilter: '报警过滤',
+  all: '全部',
+  mediumAndHigh: '中级和高级',
+  high: '高级',
+  remainingTimeSettings: '剩余时间设置',
+  remainingTimeMin: '剩余时间(min)',
+  otherSettings: '其他设置',
+  vacantSlotInInfusionDetailsList: '输注详情列表空槽位设置',
+  displayVacantSlot: '显示空槽位',
+  hideVacantSlot: '隐藏空槽位',
+  mustInfo: '必录字段',
+  orangeBar: '数值需小于黄色进度条的数值',
+  yellowBar: '数值需大于橙色进度条的数值',
+  editHosName: '编辑医院名称',
+  devices: '设备管理',
+  license: '购买管理'
+}

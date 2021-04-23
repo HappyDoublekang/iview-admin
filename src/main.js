@@ -4,8 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
-import ViewUI from 'view-design'
-import i18n from '@/locale'
+import ViewUI, { Message } from 'view-design'
+import i18n from './util/i18n/'
 import config from '@/config'
 import importDirective from '@/directive'
 import { directive as clickOutside } from 'v-click-outside-x'
@@ -37,16 +37,19 @@ Vue.config.productionTip = false
  */
 Vue.prototype.$config = config
 /**
+ * @description 全局使用message提示
+ */
+Vue.prototype.$Message = Message;
+/**
  * 注册指令
  */
 importDirective(Vue)
 Vue.directive('clickOutside', clickOutside)
 
 /* eslint-disable no-new */
-new Vue({
-  el: '#app',
+export const vue = new Vue({
   router,
-  i18n,
   store,
-  render: h => h(App)
-})
+  i18n,
+  render: (h) => h(App),
+}).$mount("#app");
