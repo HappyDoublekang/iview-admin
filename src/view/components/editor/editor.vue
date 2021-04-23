@@ -1,12 +1,14 @@
 <template>
   <div>
-    <editor ref="editor" :value="content" @on-change="handleChange"/>
+    <editor ref="editor"
+            :value="content"
+            @on-change="handleChange" />
     <Button @click="changeContent">修改编辑器内容</Button>
   </div>
 </template>
 
 <script>
-import Editor from '_c/editor'
+import Editor from '@/components/editor'
 export default {
   name: 'editor_page',
   components: {
@@ -29,5 +31,4 @@ export default {
 </script>
 
 <style>
-
 </style>

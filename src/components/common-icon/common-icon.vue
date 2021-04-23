@@ -1,9 +1,12 @@
 <template>
-  <component :is="iconType" :type="iconName" :color="iconColor" :size="iconSize"/>
+  <component :is="iconType"
+             :type="iconName"
+             :color="iconColor"
+             :size="iconSize" />
 </template>
 
 <script>
-import Icons from '_c/icons'
+import Icons from '@/components/icons'
 export default {
   name: 'CommonIcon',
   components: { Icons },
@@ -38,5 +41,4 @@ export default {
 </script>
 
 <style>
-
 </style>

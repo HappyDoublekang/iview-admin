@@ -3,24 +3,30 @@
     <i-col span="12">
       <Card>
         <div class="update-paste-con">
-          <paste-editor v-model="pasteDataArr" @on-success="handleSuccess" @on-error="handleError"/>
+          <paste-editor v-model="pasteDataArr"
+                        @on-success="handleSuccess"
+                        @on-error="handleError" />
         </div>
         <div class="update-paste-btn-con">
           <span class="paste-tip">使用Tab键换列，使用回车键换行</span>
-          <Button type="primary" style="float: right;" @click="handleShow">显示表格数据</Button>
+          <Button type="primary"
+                  style="float: right;"
+                  @click="handleShow">显示表格数据</Button>
         </div>
       </Card>
     </i-col>
     <i-col span="12">
       <Card>
-        <Table :height="400" :columns="columns" :data="tableData"/>
+        <Table :height="400"
+               :columns="columns"
+               :data="tableData" />
       </Card>
     </i-col>
   </Row>
 </template>
 
 <script>
-import PasteEditor from '_c/paste-editor'
+import PasteEditor from '@/components/paste-editor'
 import { getTableDataFromArray } from '@/libs/util'
 export default {
   name: 'update_paste_page',
@@ -61,17 +67,17 @@ export default {
 </script>
 
 <style lang="less">
-.update-paste{
-  &-con{
+.update-paste {
+  &-con {
     height: 350px;
   }
-  &-btn-con{
+  &-btn-con {
     box-sizing: content-box;
     height: 30px;
     padding: 15px 0 5px;
   }
 }
-.paste-tip{
+.paste-tip {
   color: #19be6b;
 }
 </style>
